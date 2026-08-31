@@ -1,16 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CS180 Portfolio | Madalina Voica</title>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <h1>Welcome to My CS180 Portfolio!</h1>
-    <a href="./1/index.html">Project 1</a>
+
+    <header class="site-header">
+        <div class="logo">MV</div>
+
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="#projects">Projects</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+            <p class="eyebrow">UC Berkeley · CS 180</p>
+
+            <h1>
+                Computational
+                <span>Photography</span>
+            </h1>
+
+            <p class="hero-description">
+                A collection of my projects for CS 180:
+                Introduction to Computer Vision and Computational Photography.
+            </p>
+
+            <a class="button" href="#projects">
+                Explore projects
+            </a>
+        </section>
+
+
+        <section class="projects-section" id="projects">
+
+            <div class="section-heading">
+                <p class="eyebrow">Coursework</p>
+                <h2>Projects</h2>
+            </div>
+
+
+            <div class="project-grid">
+
+                <a class="project-card" href="./1/index.html">
+                    <div class="project-number">01</div>
+
+                    <div class="project-content">
+                        <h3>Project 1</h3>
+                        <p>
+                            Images of the Russian Empire:
+                            Colorizing the Prokudin-Gorskii Photo Collection.
+                        </p>
+
+                        <span class="project-link">
+                            View project →
+                        </span>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Madalina Voica · CS 180 · UC Berkeley</p>
+    </footer>
+
 </body>
 </html>
