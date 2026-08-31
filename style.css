@@ -311,5 +311,25 @@ footer {
 
     .page-container {
         padding: 0 22px;
+        figure {
+            margin: 30px auto;
+            text-align: center;
+        }
+        
+        figure img {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        figcaption {
+            margin-top: 8px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 12px;
+            font-style: italic;
+            color: var(--text-light);
+            letter-spacing: 0.02em;
+            text-align: center;
+        }
     }
 }
