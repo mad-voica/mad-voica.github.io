@@ -1,26 +1,13 @@
-/* =========================
-   COLORS
-   ========================= */
-
 :root {
     --cream: #faf7f2;
-    --cream-dark: #f2ebe3;
-    --blush: #f3e4e5;
-    --pink: #dfc1c5;
-
-    --maroon: #681f2e;
-    --maroon-dark: #48131e;
+    --blush: #f4e7e8;
+    --maroon: #741f31;
+    --maroon-dark: #521622;
 
     --text: #342a2b;
     --text-light: #786b6d;
-
-    --border: #e5d8d5;
+    --border: #e4d8d6;
 }
-
-
-/* =========================
-   GLOBAL
-   ========================= */
 
 * {
     box-sizing: border-box;
@@ -33,7 +20,7 @@ html {
 body {
     margin: 0;
 
-    background-color: var(--cream);
+    background: var(--cream);
     color: var(--text);
 
     font-family: "Helvetica Neue", Arial, sans-serif;
@@ -47,12 +34,10 @@ a {
 }
 
 
-/* =========================
-   HEADER
-   ========================= */
+/* Header */
 
 .site-header {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 
     padding: 28px 40px;
@@ -64,36 +49,19 @@ a {
 
 .logo {
     font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 21px;
 
     color: var(--maroon);
-
-    border: 1px solid var(--maroon);
-
-    width: 44px;
-    height: 44px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
 }
 
 nav {
     display: flex;
-    gap: 30px;
+    gap: 28px;
 }
 
 nav a {
     font-size: 14px;
-    letter-spacing: 0.04em;
-
     color: var(--text-light);
-
-    transition: color 0.2s ease;
 }
 
 nav a:hover {
@@ -101,26 +69,23 @@ nav a:hover {
 }
 
 
-/* =========================
-   HERO
-   ========================= */
+/* Hero */
 
 .hero {
     max-width: 1000px;
 
-    margin: 80px auto 130px;
+    margin: 100px auto 140px;
 
     padding: 0 40px;
 }
 
 .eyebrow {
-    margin-bottom: 14px;
+    margin: 0 0 18px;
 
     color: var(--maroon);
 
     text-transform: uppercase;
-
-    letter-spacing: 0.18em;
+    letter-spacing: 0.2em;
 
     font-size: 12px;
     font-weight: 600;
@@ -131,12 +96,11 @@ nav a:hover {
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(64px, 9vw, 120px);
-    line-height: 0.92;
+    font-size: clamp(58px, 8vw, 105px);
+    line-height: 0.95;
 
     font-weight: 400;
-
-    letter-spacing: -0.045em;
+    letter-spacing: -0.04em;
 
     color: var(--maroon-dark);
 }
@@ -150,9 +114,9 @@ nav a:hover {
 }
 
 .hero-description {
-    max-width: 580px;
+    max-width: 560px;
 
-    margin: 35px 0;
+    margin-top: 30px;
 
     font-family: Georgia, "Times New Roman", serif;
 
@@ -161,42 +125,17 @@ nav a:hover {
     color: var(--text-light);
 }
 
-.button {
-    display: inline-block;
 
-    padding: 13px 24px;
-
-    background-color: var(--maroon);
-    color: white;
-
-    border-radius: 100px;
-
-    font-size: 14px;
-
-    transition:
-        background-color 0.2s ease,
-        transform 0.2s ease;
-}
-
-.button:hover {
-    background-color: var(--maroon-dark);
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================
-   PROJECTS
-   ========================= */
+/* Projects */
 
 .projects-section {
-    background-color: var(--blush);
+    background: var(--blush);
 
-    padding: 100px 40px;
+    padding: 90px 40px 110px;
 }
 
 .section-heading,
-.project-grid {
+.project-list {
     max-width: 1000px;
 
     margin-left: auto;
@@ -204,7 +143,7 @@ nav a:hover {
 }
 
 .section-heading {
-    margin-bottom: 45px;
+    margin-bottom: 35px;
 }
 
 .section-heading h2 {
@@ -212,89 +151,73 @@ nav a:hover {
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 50px;
+    font-size: 48px;
     font-weight: 400;
 
     color: var(--maroon-dark);
 }
 
-.project-grid {
-    display: grid;
+.project-list {
+    border-top: 1px solid var(--border);
+}
 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.project-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 40px;
 
     gap: 20px;
+
+    align-items: center;
+
+    padding: 30px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    transition: padding-left 0.2s ease;
 }
 
-.project-card {
-    background-color: rgba(255, 255, 255, 0.5);
-
-    border: 1px solid var(--border);
-
-    padding: 30px;
-
-    min-height: 260px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    transition:
-        transform 0.25s ease,
-        background-color 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-4px);
-
-    background-color: rgba(255, 255, 255, 0.8);
-
-    box-shadow: 0 15px 40px rgba(72, 19, 30, 0.08);
+.project-row:hover {
+    padding-left: 8px;
 }
 
 .project-number {
     font-family: Georgia, "Times New Roman", serif;
 
-    color: var(--maroon);
-
     font-style: italic;
+    font-size: 17px;
 
-    font-size: 18px;
+    color: var(--maroon);
 }
 
-.project-content h3 {
-    margin-bottom: 8px;
+.project-row h3 {
+    margin: 0 0 4px;
 
     font-family: Georgia, "Times New Roman", serif;
 
-    color: var(--maroon-dark);
-
-    font-size: 27px;
-
+    font-size: 24px;
     font-weight: 400;
+
+    color: var(--maroon-dark);
 }
 
-.project-content p {
-    color: var(--text-light);
+.project-row p {
+    margin: 0;
 
     font-size: 14px;
+
+    color: var(--text-light);
 }
 
-.project-link {
-    display: inline-block;
-
-    margin-top: 16px;
+.arrow {
+    text-align: right;
 
     color: var(--maroon);
 
-    font-size: 14px;
+    font-size: 20px;
 }
 
 
-/* =========================
-   CONTENT PAGES
-   ========================= */
+/* General project pages */
 
 .page-container {
     max-width: 900px;
@@ -305,13 +228,14 @@ nav a:hover {
 }
 
 .page-title {
+    margin-bottom: 25px;
+
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(48px, 7vw, 80px);
+    font-size: clamp(46px, 7vw, 76px);
+    line-height: 1;
 
     font-weight: 400;
-
-    line-height: 1;
 
     color: var(--maroon-dark);
 }
@@ -321,46 +245,49 @@ nav a:hover {
 
     font-family: Georgia, "Times New Roman", serif;
 
-    color: var(--maroon);
-
     font-size: 30px;
-
     font-weight: 400;
+
+    color: var(--maroon);
+}
+
+.page-container h3 {
+    margin-top: 38px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 21px;
+    font-weight: 400;
+
+    color: var(--maroon-dark);
 }
 
 .page-container img {
-    max-width: 100%;
-
     display: block;
 
-    margin: 30px auto;
+    max-width: 100%;
 
-    border-radius: 3px;
+    margin: 28px auto;
 }
 
 
-/* =========================
-   FOOTER
-   ========================= */
+/* Footer */
 
 footer {
-    padding: 40px;
+    padding: 36px;
 
     text-align: center;
 
-    font-size: 12px;
+    border-top: 1px solid var(--border);
 
-    letter-spacing: 0.07em;
+    font-size: 12px;
+    letter-spacing: 0.06em;
 
     color: var(--text-light);
-
-    border-top: 1px solid var(--border);
 }
 
 
-/* =========================
-   MOBILE
-   ========================= */
+/* Mobile */
 
 @media (max-width: 600px) {
 
@@ -368,18 +295,18 @@ footer {
         padding: 22px;
     }
 
-    nav {
-        gap: 16px;
-    }
-
     .hero {
-        margin-top: 60px;
+        margin: 65px auto 90px;
 
         padding: 0 22px;
     }
 
     .projects-section {
-        padding: 70px 22px;
+        padding: 65px 22px 80px;
+    }
+
+    .project-row {
+        grid-template-columns: 45px 1fr 25px;
     }
 
     .page-container {
