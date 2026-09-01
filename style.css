@@ -291,6 +291,15 @@ figcaption {
     text-align: center;
 }
 
+.image-row {
+    display: flex;
+    gap: 20px;
+}
+
+.image-row img {
+    width: 50%;
+    height: auto;
+}
 /* Footer */
 
 footer {
