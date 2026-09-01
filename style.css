@@ -294,11 +294,19 @@ figcaption {
 .image-row {
     display: flex;
     gap: 20px;
+    align-items: flex-start;
 }
 
-.image-row img {
-    width: 50%;
+.image-row figure {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+}
+
+.page-container .image-row img {
+    width: 100%;
     height: auto;
+    margin: 0;
 }
 /* Footer */
 
